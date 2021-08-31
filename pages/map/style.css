@@ -1,0 +1,1386 @@
+
+.wrapper-first-page{
+    min-width: 1920px;
+    margin: 0 auto;
+   }
+ @media  (max-width: 1280px) {
+     .wrapper-first-page{
+         min-width: 1200px;
+     }
+ }  
+   .wrapper-header{
+       min-width: 1920px;
+       height: 110px;
+       background-color: hsl(27, 91%, 55%);
+   }
+   @media (max-width: 1280px) {
+       .wrapper-header{
+           min-width: 1200px;
+       }
+   }
+   .header{
+       max-width: 1400px;
+       margin: 0 auto;
+       padding-top: 30px;
+       display: flex;
+       justify-content: space-between;
+       align-content: center;
+       align-items: center;
+   }
+   @media (max-width:1280px) {
+    .header{
+        max-width: 1000px;
+    }
+   }
+   .logo{
+       width: 96px;
+       height: 50px;
+       background-image: url(../../../online-zoo/assets/images/Logo.png);
+   }
+   .logo h1{
+       visibility: hidden;
+       font-size: 0em;
+   }
+   .nav {
+       width: 801px; 
+       height: 42px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   /* скрываем чекбокс */
+#menu__toggle {
+    visibility: hidden;
+  }
+.menu__btn{
+    visibility: hidden;
+}
+  
+@media (max-width: 640px) {
+    #menu__toggle {
+        visibility: visible;
+        opacity: 0;
+      }
+    /* стилизуем кнопку */
+  .menu__btn {
+    visibility: visible;
+    display: flex; 
+    align-items: center; 
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute; 
+    width: 36px;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+/* контейнер меню */
+.menu__box {
+  display: block;
+  visibility: hidden;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    
+  }
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+}
+   .nav-ul{
+       right: 0;
+       height: 27px;
+       width: 556px;
+       margin: 0;
+       padding: 0;
+       list-style-type: none;
+       display: flex;
+       justify-content: space-between;
+   }
+   .nav-ul-link{
+      text-decoration: none;
+      font-family: Montserrat;
+       font-style: normal;
+       font-weight: 600;
+       font-size: 18px;
+       line-height: 150%;
+       text-transform: uppercase;
+       color: #000000;
+       transition: 0.3s;
+   }
+   .nav-ul-link:hover{
+       color: #00A092;
+       transition: 0.3s;
+   }
+   .active{
+       color: #00A092;
+       pointer-events: none;
+   }
+   .header-social{
+       width: 180px;
+       height: 42px;
+   }
+
+   @media (max-width: 640px) {
+       .header-social-top{
+           visibility: hidden;
+       }
+       .nav-ul{
+           position: fixed;
+           top: 0;
+           background-color: #20113D;
+           flex-direction: column;
+           width: 311px;
+           height: 754px;
+           z-index: 100;
+           justify-content: center;
+       }
+       .nav-ul li{
+           margin: 20px auto;
+       }
+       .nav-ul-link{
+        text-decoration: none;
+        font-family: Montserrat;
+         font-style: normal;
+         font-weight: 600;
+         font-size: 18px;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: #fff;
+         transition: 0.3s;
+     }
+     .menu__btn{
+        z-index: 101;
+     }
+     .menu__btn{
+         color:#fff;
+     }
+    }
+   .header-social-footer{
+    width: 200px;
+    height: 42px;
+   }
+   .header-social ul{
+       margin: 0;
+       padding: 0;
+       list-style-type: none;
+       display: flex;
+       justify-content: space-between;
+   }
+   .youtube{
+       height: 40px;
+       width: 40px;
+       background-color: #FF0000;
+       border-radius: 50%;
+       background-image: url(../../../online-zoo/assets/icons/Subtract.svg);
+       background-position: center;
+       background-repeat: no-repeat;
+       transition: 0.3s;
+   }
+   .youtube:hover{
+       background-color: #20113D;
+       transition: 0.3s;
+   }
+   .insta{
+       height: 40px;
+       width: 40px;
+       background-color: #C13584;
+       border-radius: 50%;
+       background-image: url(../../../online-zoo/assets/icons/instagram\ icon.svg);
+       background-position: center;
+       background-repeat: no-repeat;
+       transition: 0.3s;
+   }
+   .insta:hover{
+       background-color: #20113D;
+       transition: 0.3s;
+   }
+   .facebuk{
+       height: 40px;
+       width: 40px;
+       background-color:#3B5998;
+       border-radius: 50%;
+       background-image: url(../../../online-zoo/assets/icons/facebook\ icon.svg);
+       background-position: center;
+       background-repeat: no-repeat;
+       transition: 0.3s;
+   }
+   .facebuk:hover{
+       background-color: #20113D;
+       transition: 0.3s;
+   }
+   .map{
+       max-width: 1920px;
+       margin: 0 auto;
+   }
+   @media (max-width: 1280px) {
+       .map{
+           max-width: 1200px;
+       }
+   }
+   .map-content{
+       max-width: 1400px;
+       margin: 0 auto;
+   }
+   .map-content-header{
+       max-width: 600px;
+       margin: 0 auto;
+       text-align: center;
+   }
+   .map-content-header h2{
+       margin-top: 38px;
+       margin-bottom: 70px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #20113D;
+   }
+   .map-img{
+    
+    position: relative;
+    max-width: 1400px;
+    height: 910px;
+    background-image: url(../../../online-zoo/assets/images/Map.png);
+    background-repeat: no-repeat;
+    background-position: top;
+
+   }
+   .tooltip {
+    position: relative;
+    display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    border: 1px solid #fff;
+    width: 180px;
+    background-color: #20113D;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+     
+    bottom: 150px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    font-family: Montserrat;
+       font-style: normal;
+       font-weight: 600;
+       font-size: 14px;
+       line-height: 150%;
+       text-transform: uppercase;
+       transition: 0.2s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+   .map-img-eagl{
+       position: absolute;
+       left: 11.2%;
+        top: 43%;
+        Width: 100px;
+        Height:155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+   }
+   .map-img-eagl:hover{
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+   }
+   .map-img-eagl img{
+    margin-left: 23px;
+    margin-top: 30px;
+   }
+   .map-img-alligator{
+    position: absolute;
+    left: 20.4%;
+    top: 43.63%;
+    Width: 100px;
+    Height:155px;
+    filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-alligator img{
+    margin-left: 22px;
+    margin-top: 30px;
+   }
+   .map-img-lion{
+    position: absolute;
+    left: 40.5%;
+    top: 50%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-lion img{
+    margin-left: 22px;
+    margin-top: 30px;
+   }
+   .map-img-gorilla{
+    position: absolute;
+    left: 49%;
+    top: 52.3%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-gorilla:hover{
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+   }
+   .map-img-gorilla img{
+    margin-left: 22px;
+    margin-top: 30px;
+   }
+   .map-img-lemur{
+    position: absolute;
+    left: 56%;
+    top: 65%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-lemur:hover{
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+   }
+   .map-img-lemur img{
+    margin-left: 35px;
+    margin-top: 30px;
+   }
+   .map-img-panda{
+    position: absolute;
+    left: 67.5%;
+    top: 38.3%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-panda:hover{
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+   }
+   .map-img-panda img{
+    margin-left: 22px;
+    margin-top: 30px;
+   }
+   .map-img-jaguar{
+    position: absolute;
+    left: 71.99%;
+    top: 55.43%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-jaguar img{
+    margin-left: 22px;
+    margin-top: 30px;
+   }
+   .map-img-koala{
+    position: absolute;
+    left: 80.81%;
+    top: 67.97%;
+    Width: 100px;
+    Height:155px;
+    /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .map-img-koala img{
+    margin-left: 27px;
+    margin-top: 30px;
+   }
+
+   footer{
+       min-width: 1920px;
+       margin-top: 150px;
+       height: 329px;
+       background: #20113D;
+   }
+   @media (max-width: 1280px) {
+    footer{
+        min-width: 1200px;
+    }
+   }
+   .footer-content{
+       max-width: 1400px;
+       margin: 0 auto;
+   }
+   @media (max-width: 1280px) {
+       .footer-content{
+           max-width: 1120px;
+       }
+   }
+   .footer-content-top{
+       padding-top: 75px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .footer-top-img{
+       width: 414px;
+       display: flex;
+       justify-content: space-between;
+   }
+   .footer-top-img-logo{
+       width: 96px;
+       height: 50px;
+       background-image: url(../../../online-zoo/assets/icons/Logo-footer.svg);
+   }
+   .footer-top-img-yem{
+       width: 50px;
+       height: 50px;
+       background-image: url(../../../online-zoo/assets/icons/Yem.svg);
+   }
+   .footer-top-img-rs{
+       width: 138px;
+       height: 51.11px;
+       background-image: url(../../../online-zoo/assets/icons/rs_school_js_logo.svg);
+   }
+   
+   .footer-top-button{
+       width: 359px;
+       height: 74px;
+       border: 1px solid #FFFFFF;
+       box-sizing: border-box;
+       border-radius: 5px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .footer-top-button a{
+       width: 359px;
+       height: 74px;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-family: Montserrat;
+       font-style: normal;
+       font-weight: 600;
+       font-size: 18px;
+       line-height: 22px;
+       text-transform: uppercase;
+       color: #FFFFFF;
+       transition: 0.3s;
+   }
+   .footer-top-button a:hover{
+       color: #20113D;
+       background:#FFFFFF;
+       transition: 0.3s;
+   }
+   .footer-nav ul{
+       padding: 0;
+       margin: 0;
+       display: flex;
+       justify-content: space-between;
+       width: 420px;
+       list-style-type: none;
+       display: flex;
+   }
+   @media (max-width:1280px) {
+       .footer-nav ul{
+           justify-content: space-around;
+       }
+   }
+   .footer-nav ul li a{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+   }
+   .footer-content-middle{
+       max-width: 1400px;
+       height: 1px;
+       margin: 67px auto 37px auto;
+       background: #FFFFFF;
+   }
+   .footer-content-bottom{
+       max-width: 1400px;
+       margin: 0 auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .footer-bottom-inc ul{
+       width: 448px;
+       padding: 0;
+       margin: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+   }
+   .footer-bottom-inc ul li{
+       font-family: Montserrat;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 18px;
+       line-height: 150%;
+       /* identical to box height, or 27px */
+       color: #FFFFFF;
+   }
+
+
+
+   @media (max-width: 1280px) {
+    .nav {
+        width: 750px; 
+        height: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-ul {
+        height: 27px;
+        width: 522px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        margin-right: 75px;
+    }
+    .header-social {
+        width: 213px;
+        height: 42px;
+    }
+    .map-content-header h2 {
+        margin-top: 31px;
+        margin-bottom: 18px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #20113D;
+    }
+    .map-img {
+        position: relative;
+        max-width: 1400px;
+        height: 910px;
+        background-image: url(../../../online-zoo/assets/images/Map.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .map-img-eagl {
+        position: absolute;
+        left: 10.2%;
+        top: 33%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        /* filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7)); */
+    }
+    .map-img-alligator {
+        position: absolute;
+        left: 20.4%;
+        top: 35.63%;
+        Width: 100px;
+        Height: 155px;
+        filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-lion {
+        position: absolute;
+        left: 40%;
+        top: 38.6%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-gorilla {
+        position: absolute;
+        left: 48.5%;
+        top: 41.3%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-lemur {
+        position: absolute;
+        left: 56%;
+        top: 53%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-panda {
+        position: absolute;
+        left: 71%;
+        top: 27.3%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-jaguar {
+        position: absolute;
+        left: 70.99%;
+        top: 45.43%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-koala {
+        position: absolute;
+        left: 80.81%;
+        top: 54.97%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    footer {
+        /* min-width: 1920px; */
+        margin-top: -35px;
+        height: 328px;
+        background: #20113D;
+    }
+    .header-social {
+        width: 200px;
+        height: 42px;
+    }
+    .footer-content-top {
+        padding-top: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-nav ul {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .wrapper-first-page {
+        min-width: 640px;
+        overflow: hidden;
+    }
+    .wrapper-header {
+        min-width: 640px;
+    }
+    .header {
+        max-width: 600px;
+    }
+    .header {
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    .map {
+        max-width: 640px;
+    }
+    .map-content-header{
+    max-width: 600px;
+    margin: 0 0;
+    text-align: center;
+    }
+    .map-content-header h2 {
+        margin-top: 26px;
+        margin-bottom: 67px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 55px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #20113D;
+        letter-spacing: -24%;
+        margin-left: 40px;
+    }
+    .map-content {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    footer {
+        min-width: 640px;
+        margin-top: -35px;
+        height: 328px;
+        background: #20113D;
+        overflow: hidden;
+    }
+    .menu__btn {
+        color: #fff;
+        margin-right: 23px;
+    }
+    .map-img-eagl {
+        position: absolute;
+        left: 6.2%;
+        top: 12%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-eagl {
+        position: absolute;
+        left: 10%;
+        top: 34%;
+        Width: 60px;
+        Height: 60px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-eagl img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-alligator {
+        position: absolute;
+        left: 19.4%;
+        top: 37%;
+        Width: 60px;
+        Height: 60px;
+        filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-alligator img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-lion {
+        position: absolute;
+        left: 40%;
+        top: 40.6%;
+        Width: 60px;
+        Height: 60px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-lion img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-gorilla {
+        position: absolute;
+        left: 48.5%;
+        top: 43.3%;
+        Width: 50px;
+        Height: 60px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-gorilla img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-lemur {
+        position: absolute;
+        left: 56%;
+        top: 53%;
+        Width: 55px;
+        Height: 65px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-lemur img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 35%;
+    }
+    .map-img-panda {
+        position: absolute;
+        left: 71%;
+        top: 29.3%;
+        Width: 55px;
+        Height: 65px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-panda img {
+        margin-left: 16px;
+        margin-top: 16px;
+        width: 43%;
+    }
+    .map-img-jaguar {
+        position: absolute;
+        left: 70.99%;
+        top: 46.23%;
+        Width: 55px;
+        Height: 65px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-jaguar img {
+        margin-left: 16px;
+        margin-top: 16px;
+        width: 43%;
+    }
+    .map-img-koala {
+        position: absolute;
+        left: 78.81%;
+        top: 55%;
+        Width: 55px;
+        Height: 65px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-koala img {
+        margin-left: 16px;
+        margin-top: 16px;
+        width: 43%;
+    }
+    .footer-content {
+        max-width: 450px;
+    }
+    footer {
+        min-width: 640px;
+        margin-top: 5px;
+        height: 543px;
+        background: #20113D;
+    }
+    .footer-content {
+        max-width: 640px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+.nav-ul {
+    width: 300px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin-right: 0;
+}
+.map-img {
+    position: relative;
+    max-width: 1400px;
+    height: 510px;
+    background-image: url(../../../online-zoo/assets/images/Map.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.footer-content-top {
+    max-width: 650px;
+    padding-top: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.nav {
+    max-width: 640px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-top-img {
+    margin: 0 auto;
+    width: 445px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav{
+    margin: 0 auto;
+}
+.footer-nav ul {
+    width: 550px;
+}
+.footer-top-button{
+    margin: 0 auto;
+}
+.footer-content-bottom {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+ }
+ .footer-bottom-inc {
+     margin: 0 auto;
+ }
+ .footer-bottom-inc ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content-middle {
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 21px auto 51px auto;
+}
+.header-social{
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.wrapper-header {
+    min-width: 640px;
+    position: fixed;
+    z-index: 1;
+}
+.map {
+    margin-top: 137px;
+    max-width: 640px;
+}
+}
+
+@media (max-width: 320px) {
+
+    .wrapper-first-page {
+        min-width: 320px;
+        overflow: hidden;
+    }
+    .wrapper-header {
+        min-width: 320px;
+    }
+    .header {
+        max-width: 300px;
+    }
+    .header {
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    .map {
+        max-width: 320px;
+    }
+    .map-content-header{
+    max-width: 300px;
+    margin: 0 0;
+    text-align: center;
+    }
+    .map-content-header h2 {
+        margin-top: 17px;
+        margin-bottom: 23px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 35px;
+        text-align: center;
+        text-transform: lowercase;
+        color: #20113D;
+        letter-spacing: -24%;
+        margin-left: 20px;
+    }
+    .map-content {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    footer {
+        min-width: 320px;
+        margin-top: -35px;
+        height: 328px;
+        background: #20113D;
+        overflow: hidden;
+    }
+    .menu__btn {
+        color: #fff;
+        margin-right: 148px;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+    .map-img-eagl {
+        position: absolute;
+        left: 6.2%;
+        top: 12%;
+        Width: 100px;
+        Height: 155px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .map-img-eagl {
+        position: absolute;
+        left: 3%;
+        top: 30%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-eagl img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-alligator {
+        position: absolute;
+        left: 15.4%;
+    top: 35%;
+    Width: 45px;
+    Height: 45px;
+        filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-alligator img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-lion {
+        position: absolute;
+        left: 38%;
+    top: 36.6%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-lion img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-gorilla {
+        position: absolute;
+        left: 46.5%;
+        top: 43.3%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-gorilla img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 43%;
+    }
+    .map-img-lemur {
+        position: absolute;
+        left: 55%;
+        top: 52%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-lemur img {
+        margin-left: 16px;
+        margin-top: 7px;
+        width: 35%;
+    }
+    .map-img-panda {
+        position: absolute;
+        left: 68%;
+        top: 29.3%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-panda img {
+        margin-left: 16px;
+        margin-top: 10px;
+        width: 43%;
+    }
+    .map-img-jaguar {
+        position: absolute;
+        left: 72.99%;
+        top: 46.23%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-jaguar img {
+        margin-left: 16px;
+        margin-top: 6px;
+        width: 43%;
+    }
+    .map-img-koala {
+        position: absolute;
+        left: 81.81%;
+        top: 55%;
+        Width: 45px;
+        Height: 45px;
+        background-image: url(../../../online-zoo/assets/icons/zoo-map/map-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 66%;
+    }
+    .map-img-koala img {
+        margin-left: 16px;
+        margin-top: 9px;
+        width: 43%;
+    }
+    .footer-content {
+        max-width: 320px;
+    }
+    footer {
+        min-width: 320px;
+        margin-top: 5px;
+        height: 700px;
+        background: #20113D;
+    }
+    .footer-content {
+        max-width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+.nav-ul {
+    width: 300px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin-right: 0;
+}
+.map-img {
+    position: relative;
+    max-width: 1400px;
+    height: 281px;
+    background-image: url(../../../online-zoo/assets/images/Map.png);
+    background-size: 111%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.footer-content-top {
+    max-width: 320px;
+    padding-top: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.nav {
+    max-width: 300px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-top-img {
+        margin: 0 auto;
+        width: 135px;
+        height: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 27px;
+}
+.footer-top-img-logo{
+    margin-left: 20px;
+}
+.footer-top-img-yem{
+    margin-left: 40px;
+}
+.footer-nav{
+    margin: 0 auto;
+    margin-bottom: 31px;
+}
+.footer-nav ul {
+    width: 300px;
+}
+.footer-top-button{
+    margin: 0 auto;
+    width: 301px;
+    height: 44px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content-bottom {
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin-top: 96px;
+ }
+ .footer-top-button a {
+    width: 237px;
+    height: 74px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+ .footer-bottom-inc {
+     margin: 0 auto;
+     margin-top: 15px;
+ }
+ .footer-bottom-inc ul {
+    width: auto;
+    margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+}
+.footer-bottom-inc ul li {
+    width: auto;
+    margin: 0 auto;
+    line-height: 315%;
+}
+.footer-content-middle {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 0;
+    bottom: -357px;
+}
+.header-social{
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.map {
+    margin-top: 128px;
+}
+}
